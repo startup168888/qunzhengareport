@@ -1,0 +1,104 @@
+Page View and View Duration Section
+nan has the most popular page view of  671 .
+(not set) is the least popular page view of  1 .
+SHOP |E-Commerce has the highest view duration of  Average Time on Page 3 . 5 minutes.
+(not set) has the lowest view duration of  Average Time on Page 0 . 1 minutes.
+8 . 41 minutes is the sum of  average time across all the pages for the E-Commerce website.
+For all information regarding each page title, please see the below content.
+SHOP |E-Commerce has a page view of  313 and a bounce rate of 27.83% .
+User stay at the page with an average time of 3 . 5 minutes.
+CART |E-Commerce has a page view of  199 and a bounce rate of 37.50% .
+User stay at the page with an average time of 0 . 39 minutes.
+Payment |E-Commerce has a page view of  94 and a bounce rate of 66.67% .
+User stay at the page with an average time of 0 . 58 minutes.
+ABOUT |E-Commerce has a page view of  44 and a bounce rate of 33.33% .
+User stay at the page with an average time of 1 . 55 minutes.
+Thank You |E-Commerce has a page view of  20 and a bounce rate of 100.00% .
+User stay at the page with an average time of 0 . 16 minutes.
+(not set) has a page view of  1 and a bounce rate of 0.00% .
+User stay at the page with an average time of 0 . 1 minutes.
+nan has a page view of  671 and a bounce rate of 29.32% .
+User stay at the page with an average time of 1 . 46 minutes.
+
+Conversion Rate Section
+100.0 % is the highest percentage of conversion rate.
+20211110 has the highest conversion rate of 100.0 %.
+20211120 has the highest conversion rate of 100.0 %.
+20211126 has the highest conversion rate of 100.0 %.
+20211212 has the highest conversion rate of 100.0 %.
+
+Users Location Section
+The highest number of users is from  Singapore which has  30 users that has initiated at least one 
+session on the website.
+The lowest number of users is from  United States which has  1 users that has initiated at least one  
+session on the website.
+For Singapore , the number of user who have initiated at least one session on the website is 30 .
+The average session duration whereby user have spent on the page is 7 . 20 minutes. 
+The total number of session for Singapore is 130 .
+For Indonesia , the number of user who have initiated at least one session on the website is 2 .
+The average session duration whereby user have spent on the page is 12 . 37 minutes. 
+The total number of session for Indonesia is 3 .
+For United States , the number of user who have initiated at least one session on the website is 1 .
+The average session duration whereby user have spent on the page is 0 . 0 minutes. 
+The total number of session for United States is 1 .
+12:37 minutes is the highest average session duration for this website.
+
+Traffic Sources Section
+Direct has both the highest users of 30 and new users of 31 . Therefore it is a better performing 
+channel in driving more users.
+Referral has either the lowest users of 5 or new users of 1 .Therefore it is a not quite effective in 
+driving more users.
+Social has either the lowest users of 3 or new users of 3 .Therefore it is a not quite effective in 
+driving more users.
+For traffic source from Direct it has drive 30 users and 31 new users to the website. It has the 
+total session of 81 and at the same time pageviews per session of 5.6 .
+For traffic source from Referral it has drive 5 users and 1 new users to the website. It has the 
+total session of 59 and at the same time pageviews per session of 3.86 .
+For traffic source from Social it has drive 3 users and 3 new users to the website. It has the 
+total session of 3 and at the same time pageviews per session of 2.0 .
+
+Social Network Traffic Section
+  Social Network  Sessions  Pageviews  Avg. Session Duration  Pages / Session
+0      Instagram         2          5                  164.0              2.5
+1       Facebook         1          1                    0.0              1.0
+The highest sessions for social network is from Instagram which has 66.67 % of sessions where 
+by users are actively engaged with the website.
+The lowest sessions for social network is from Facebook which has 33.33 % of sessions where 
+by users are actively engaged with the website.
+Instagram has a percentage of  66.67 % of sessions where by users are actively engaged with 
+the website. The average session duration for Instagram is 2 . 44 minutes.
+Facebook has a percentage of  33.33 % of sessions where by users are actively engaged with 
+the website. The average session duration for Facebook is 0 . 0 minutes.
+
+User Retention Section
+Nov 28, 2021 - Dec 4, 2021 has the highest user retention of 23 .
+From Nov 7, 2021 - Nov 13, 2021 has a user retention of 3  which is more than 0 compared to the 
+other periods.
+From Nov 14, 2021 - Nov 20, 2021 has a user retention of 2  which is more than 0 compared to the 
+other periods.
+From Nov 21, 2021 - Nov 27, 2021 has a user retention of 2  which is more than 0 compared to the 
+other periods.
+From Nov 28, 2021 - Dec 4, 2021 has a user retention of 23  which is more than 0 compared to the 
+other periods.
+From Dec 5, 2021 - Dec 11, 2021 has a user retention of 3  which is more than 0 compared to the 
+other periods.
+
+New and Returning Visitors Section
+New Visitor has both the highest number of users of 34 and new users of 35 visiting the website.
+Even though the session is  35 which is lower compared to Returning Visitors, it has a higher 
+pages/sessions view of 7.29 . For the average session duration, it is 7 . 49 minutes.
+Returning Visitor has of users of 16 and new users of 0 visiting the website.
+Even though the session is  109 which is higher compared to New Visitors, it has a lower 
+pages/sessions view of 3.98 . For the average session duration, it is 6 . 46 minutes.
+
+Technology details of browsers used
+Chrome is the most popular browser as such the website or mobile application should be well-tested 
+for Chrome . Chrome manage to drive 19 users and 20 new users to the website which is the highest 
+compared to other browsers.The session for Chrome is 113 which is also the highest sessions.
+Firefox is the least popular browser as such the website or mobile application is less likely for users to 
+use it on Firefox . Firefox manage to drive 1 users and 1 new users to the website which is the 
+lowest compared to other browsers.The session for Firefox is 2 .
+Internet Explorer is the least popular browser as such the website or mobile application is less likely 
+for users to use it on Internet Explorer . Internet Explorer manage to drive 1 users and 1 new users to 
+the website which is the lowest compared to other browsers.
+The session for Internet Explorer is 1 which is also the lowest sessions.
