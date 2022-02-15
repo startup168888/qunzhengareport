@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: livedataframe
+Version: 0.0.24
+Summary: Client for the LiveDataFrame analysis tool
+Home-page: http://www.livedataframe.com
+Author: Chris Dimoff
+Author-email: chris@livedataframe.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
