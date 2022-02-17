@@ -1,0 +1,94 @@
+Metadata-Version: 1.0
+Name: pydataframe
+Version: 0.1.7
+Summary: A DataFrame (table like datastructure) for Python, similar to R's dataframe based on numpy arrays
+Home-page: http://code.google.com/p/pydataframe/
+Author: Florian Finkernagel
+Author-email: finkernagel@coonabibba.de
+License: BSD
+Description: An implemention of an almost R like DataFrame object. 
+        Usage: 
+                u = DataFrame( { "Field1": [1, 2, 3], 
+                                "Field2": ['abc', 'def', 'hgi']},
+                                optional:
+                                 ['Field1', 'Field2']
+                                 ["rowOne", "rowTwo", "thirdRow"])
+        
+        A DataFrame is basically a table with rows and columns. 
+        
+        Columns are named, rows are numbered (but can be named) and can be easily selected and calculated upon. Internally, columns are stored as 1d numpy arrays. If you set row names, they're converted into a dictionary for fast access. There is a rich subselection/slicing API, see help(DataFrame.get_item) (it also works for setting values). Please note that any slice get's you another DataFrame, to access individual entries use get_row(), get_column(), get_value(). 
+        
+        DataFrames also understand basic arithmetic and you can either add (multiply,...) a constant value, or another DataFrame of the same size / with the same column names, like this: 
+        #multiply every value in ColumnA that is smaller than 5 by 6.
+        my_df[my_df[:,'ColumnA'] < 5, 'ColumnA'] *= 6
+        
+        #you always need to specify both row and column selectors, use : to mean everything
+        my_df[:, 'ColumnB'] = my_df[:,'ColumnA'] + my_df[:, 'ColumnC']
+        
+        #let's take every row that starts with Shu in ColumnA and replace it with a new list (comprehension)
+        select = my_df.where(lambda row: row['ColumnA'].startswith('Shu'))
+        my_df[select, 'ColumnA'] = [row['ColumnA'].replace('Shu', 'Sha') for row in my_df[select,:].iter_rows()]
+        
+        Dataframes talk directly to R via rpy2 (rpy2 is not a prerequiste for the library!) 
+        from dataframe import DataFrame
+        from rpy2 import robjects as ro
+        my_df = DataFrame({"ColumnA": [1,2,3], 'ColumnB': ['sha','sha','shu']})
+        ro.r['print'](my_df)
+        
+        Combine DataFrames on rows or columns:
+        my_df = a.rbind_copy(b) # a and b have the same columns
+        my_df = a.cbind_view(b) # my_df is a composite sharing numpy arrays (columns) with a and b
+        my_d = a.join_columns_on(b, 'Name_in_A', 'Name_in_B") #join on common values
+        
+        #manipulate DataFrame columns
+        my_df.insert_column("new_column_name", [1,2, 3])
+        my_df.drop_column('dropped_column_name')
+        my_df.drop_all_columns_except('keep_me_please', 'keep_me_as_well')
+        my_df.rename_column("old","new")
+        print my_df.get_column_names()
+        my_df.impose_partial_column_order(['FirstColumn','Second_Column'],['pen_ultimate_column','ultimate_column']) # set the column order. Everything between the first and the second list (unspecified columns) get's sorted alphabetically
+        
+        #access data
+        my_df[100, "ColumnA"] #a new DataFrame with one column and one row
+        my_df.get_value(100, 'ColumnA') #whatever was in in row 100, column 'ColumnA' (string, int, object...)
+        my_df.get_row(100) # -> {"ColumnA": value, "ColumnB": another_value}
+        my_df.get_row_as_list(100) # -> [value, another_value], in order of my_df.columns_ordered
+        my_df.get_column('columnA') # numpy array of the column (a copy)
+        my_df.get_column_view('columnA') # the actual underlying numpy array
+        
+        #iterate across the data
+        my_df.iter_rows()  # iter rows as dictionarys
+        my_df.iter_rows_as_list()  # iter rows as lists (see get_row_as_list())
+        my_df.iter_values_columns_first() #value by value, first column row 1, first column row 2...
+        my_df.iter_values_rows_first() #value by value, first column, row 1, second column, row 1
+        
+        #turn into boolean array for subselection
+        my_df.where(lambda row: row['ColumnA'].startswith("Hello") and row['ColumnB'] >=5)
+        my_df[:,"Just_one_column"] > 5 # any comparison
+        
+        #sort
+        sorted_df = my_df.sort_by("ColumnA") # copy sorted by ColumnA ascending
+        sorted_df = my_df.sort_by("ColumnA", False) # copy sorted by ColumnA descending
+        sorted_df = my_df.sort_by(["ColumnA", 'ColumnB'], [False, True]) # copy sorted by ColumnA descending, then Column B ascending 
+        
+        #aggregation functions
+        my_df.mean('ColumnA') # - average (mean) of the values in ColumnA
+        my_df.mean_and_std('ColumnA') # - mean and standard deviation of the values in ColumnA
+        
+        #translate columns
+        my_df.turn_into_level('ColumnA') #turns into R compatible factor. Optional: order of levels
+        my_df.digitize_column('ColumnA') # bin the values
+        my_df.rankify_column('ColumnA', True) # turn into ranks, Ascending (0.5, 0.6, 0.55) -> 0, 2, 1
+        my_df.rescale_column_0_1('ColumnA') # rescales a column to lie within 0..1 (inclusive)
+        
+        
+        #import and export
+        my_df = pydataframe.DF2CSV().read("filename", dialect=pydataframe.TabDialect(), handle_quotes=True) #read a tab seperated value file. Lot's of options, please check the code
+        pydataframe.DF2CSV().write(my_df, filename, dialect=pydataframe.TabDialect()) # write a tab seperated value file
+        pydataframe.DF2Excel().read(filename)
+        pydataframe.DF2Excel().write(my_filename)
+         
+        
+        
+        
+Platform: UNKNOWN
